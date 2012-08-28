@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Presentación JavaScript</title>
+<script type="text/javascript">
+	/*
+	 * Ejemplo de pre-carga de imagen
+	 * es para que se mas rapido la carga de las imagenes a la pagina
+	 */
+		var dir1 = new Image();
+		dir1.src = "dir1.png";
+		
+		var dir2 = new Image();
+		dir2.src = "dir2.png";
+		
+		var dir3 = new Image();
+		dir3.src = "dir3.png";
+		
+		var izq1 = new Image();
+		izq1.src = "izq1.png";
+		
+		var izq2 = new Image();
+		izq2.src = "izq2.png";
+		
+		var izq3 = new Image();
+		izq3.src = "izq3.png";
+		
+		var slides = new array();
+		var pres = document.getElementById("imgPress");
+		
+		function init() {
+			pres = document.getElementById("imgPress");
+			
+			var slide1 = new Image();
+			slide1.src = "pres1.jpg";
+			var slide2 = new Image();
+			slide2.src = "pres2.jpg";
+			var slide3 = new Image();
+			slide3.src = "pres3.jpg";
+			var slide4 = new Image();
+			slide4.src = "pres4.jpg";
+			
+			slide1.proximo = slide2;
+			slide1.anterior = slide4;
+			slide2.proximo = slide3;
+			slide2.anterior = slide1;
+			slide3.proximo = slide4;
+			slide3.anterior = slide2;
+			slide4.proximo = slide1;
+			slide4.anterior = slide3;
+			
+			slides = [slide1,slide2,slide3,slide4];
+			slides[slide1.src] = slide1;
+			slides[slide2.src] = slide2;
+			slides[slide3.src] = slide3;
+			slides[slide4.src] = slide4;
+			
+		}
+</script>
+</head>
+<body bgcolor="#808080" onload="init()">
+	<table align="center" cellspacing="0">
+		<tr align="center">
+			<td colspan="2"><img id="imgPress" src="pres2.jpg" width="500" height="400"></td>
+		</tr>
+		<tr align="center" bgcolor="#606060">
+			<td align="center"><img src="izq2.png"onmouseover="this.src=izq1.src;" 
+			onmouseout="this.src=izq2.src;"
+			onmousedown="this.src=izq3.src;" 
+			onmouseup="this.src=izq1.src;"
+			onclick="pres.src = slides[pres.src].anterior.src"></td>
+			<td align="center"><img src="dir2.png" onmouseover="this.src=dir1.src;" 
+			onmouseout="this.src=dir2.src;"
+			onmousedown="this.src=dir3.src;" 
+			onmouseup="this.src=dir1.src;"
+			onclick="pres.src = slides[pres.src].proximo.src"></td>
+		</tr>
+	</table>
+</body> 
+</html>

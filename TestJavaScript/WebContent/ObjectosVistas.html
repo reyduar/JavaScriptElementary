@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Objetos y Ventanas</title>
+<script type="text/javascript">
+	/**
+	 * Ejemplo muestra la resolucion horizontal y vertical del monitor
+	 */
+	function mostrarResolucionMonitor() {
+		alert(screen.width + "x" + screen.height);
+	}
+	/**
+	 * Ejemplo para mostrar directorios
+	 */
+	function mostrarLocalizacion() {
+		document.getElementById("divLoc").style.display="block";
+	}
+	
+</script>
+</head>
+<body>
+	<input type=button value="Mostrar Resolucion" onclick="mostrarResolucionMonitor()">
+	<input type=button value="Localizaciones" onclick="mostrarLocalizacion()">
+	<input type=button value="Assign" onclick="location.assign('Eventos.html')">
+	<input type=button value="Replace" onclick="location.replace('Eventos.html')">
+	<div id="divLoc" style="display:none">
+		<script type="text/javascript">
+			document.write("host :"+location.host+"<br>");
+			document.write("hostname :"+location.hostname+"<br>");
+			document.write("pathname :"+location.pathname+"<br>");
+			document.write("href :"+location.href+"<br>");
+			document.write("Search :"+location.search+"<br>");
+		</script>
+	</div>
+</body>
+</html>

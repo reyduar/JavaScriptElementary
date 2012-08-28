@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Objeto Document</title>
+<script type="text/javascript">
+	function manipulaDocument() {
+		alert("Se actualizara el nombre del boton");
+		var elemento = document.getElementById("boton1");
+		with(elemento){
+			value = "botonAceptar";
+			title = "Comentariossss...."
+		}
+		
+		var forms = document.forms;
+		for ( var i = 0; forms.length; i++) {
+			alert(forms[i].id);
+		}
+	}
+</script>
+</head>
+<body>
+	<input id="boton1" type="button" value="Aceptar" />
+	<form id="from1">
+	
+	</form>
+	<form id="from2">
+	
+	</form>
+	<form id="from3">
+	
+	</form>
+	<script type="text/javascript">
+		manipulaDocument();
+	</script>
+</body>
+</html>

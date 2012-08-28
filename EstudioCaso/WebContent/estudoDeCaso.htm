@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<title>www.t2ti.com</title><!-- meta in -->
+
+
+
+	
+	<meta http-equiv="Content-Language" content="en">
+<meta name="author" content="Department of Clinical Medicine, Trinity College Dublin">
+<meta name="copyright" content="Copyright (c) 2006 Trinity College Dublin">
+<meta name="robots" content="all">
+<meta name="keywords" content="department of clinical medicine, clinical medicine, trinity college dublin, trinity, university of dublin, university, ireland">
+<meta name="description" content="Department of Clinical Medicine, Trinity College Dublin"><!-- meta out --><!-- stylesheet In -->
+	
+	
+	
+	<style type="text/css" media="screen">
+	<!--
+	@import url("../../assets/styles/style.css");
+		#primarynav ul li a#home {
+		color: #FF8608;
+		}
+		-->
+		</style><!-- stylesheet Out --><!-- Head Out --><script charset="utf-8" id="injection_graph_func" src="estudoDeCaso_arquivos/injection_graph_func.js"></script>
+		<script type="text/javascript" src="t2ti.js"></script>
+		<script type="text/javascript">
+			function validarDados()
+			{
+				if(!validarNome(document.getElementById("nome")))
+				{
+					alert("Digite nome e sobrenome");
+					rolagem(document.getElementById("nome"));
+					document.getElementById("nome").style.backgroundColor="#FFFFAA";
+					return false;
+				}else if(!validarSexo(document.getElementById("sexo")))
+				{
+					alert("Selecione a opção de sexo");
+					rolagem(document.getElementById("sexo"));
+					document.getElementById("sexo").style.backgroundColor="#FFFFAA";
+					return false;
+				}else if(!verificarTextoValido(document.getElementById("endereco").value))
+				{
+					alert("Digite um endereço válido");
+					rolagem(document.getElementById("endereco"));
+					document.getElementById("endereco").style.backgroundColor="#FFFFAA";
+					return false;
+				}else if(document.getElementById("telefone").value.length  < 7)
+				{
+					alert("Digite um telefone válido");
+					rolagem(document.getElementById("telefone"));
+					document.getElementById("telefone").style.backgroundColor="#FFFFAA";
+					return false;
+				}else if(!validarEmail(document.getElementById("email")))
+				{
+					alert("Digite um email válido");
+					rolagem(document.getElementById("email"));
+					document.getElementById("email").style.backgroundColor="#FFFFAA";
+					return false;
+				}else if(!validarData(document.getElementById("data")))
+				{
+					alert("Digite uma data válida");
+					rolagem(document.getElementById("data"));
+					document.getElementById("data").style.backgroundColor="#FFFFAA";
+					return false;
+				}
+				alert("Campos validados com sucesso!");
+				return true;				
+			}
+		</script>
+		</head><body>
+	<!-- tcd top banner in -->
+	<div id="topbanner">
+	<div class="hide">| <a href="#breadcrumbskip" id="topskip">Skip Trinity Banner Navigation</a> |</div>
+ 	<div class="tcd-header-slim" style="border-bottom: 2px solid rgb(14, 107, 174); background: rgb(255, 255, 255) none repeat scroll 0%; font-family: Verdana,Arial,Helvetica,sans-serif; position: static; display: block; float: none; width: 100%; height: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-size: 100%; line-height: 1.8;">
+<div style="border: medium none ; background: transparent none repeat scroll 0%; font-family: Verdana,Arial,Helvetica,sans-serif; position: static; display: block; float: left; width: 100%; height: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; font-size: 100%; line-height: 1.8;">
+        <p style="display: none;"><a href="#main-content">Skip to main content</a> <span>»</span></p>
+        <h1 style="border: 0pt none ; margin: 0pt; padding: 3px 0pt 0pt 5px; background: transparent none repeat scroll 0%; display: block; position: static; float: left; width: auto; height: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+        	<a style="border: 0pt none ; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0%; overflow: hidden; cursor: pointer; display: block; position: relative; float: none; width: 354px; height: 54px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" href="http://www.tcd.ie/">Trinity College Dublin<span style="background: transparent url(http://www.tcd.ie/img/tcdLogo.gif) no-repeat scroll left top; display: block; position: absolute; top: 0pt; left: 0pt; float: none; width: 354px; height: 54px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"></span></a></h1>
+                <form class="tcd-search" style="border: 0pt none ; margin: 13px 5px 0px 0pt; padding: 0pt; background: transparent none repeat scroll 0%; float: right; width: 185px; height: 32px; color: rgb(104, 137, 153); text-align: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" method="get" action="http://search.tcd.ie/search">
+                        <fieldset style="border: 0pt none ; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0%; position: static; float: right; display: block; width: auto; height: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+                                <label for="search" class="cloak" style="display: none;"><span class="accelerator-key">S</span>earch TCD</label>
+                                <input accesskey="s" class="box" style="border: 1px solid rgb(177, 189, 201); margin: 0px; padding: 3px 3px 4px 8px; background: rgb(241, 244, 249) none repeat scroll 0%; position: static; float: left; width: 140px; height: auto; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; line-height: normal; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(28, 89, 143); vertical-align: top;" name="q" id="search" value="Search TCD" onfocus="if(this.value=='Search TCD'){this.value='';this.style.color='#54575e';this.style.background='#ffffff';}else{this.select();}" onblur="if(this.value==''){this.value='Search TCD';this.style.color='#54575e';this.style.background='#EDF1F8';}" type="text">
+                                <input style="border: 0pt none ; margin: 0pt; padding: 0pt; position: static; display: block; float: left; width: auto; height: auto;" src="estudoDeCaso_arquivos/searchButton.gif" class="submit" alt="Go" value="go" type="image">
+                                <input name="entqr" value="0" type="hidden">
+                                <input name="ud" value="1" type="hidden">
+                                <input name="sort" value="date:D:L:d1" type="hidden">
+                                <input name="output" value="xml_no_dtd" type="hidden">
+                                <input name="oe" value="UTF-8" type="hidden">
+                                <input name="ie" value="UTF-8" type="hidden">
+                                <input name="client" value="default_frontend" type="hidden">
+                                <input name="proxystylesheet" value="default_frontend" type="hidden">
+                                <input name="site" value="default_collection" type="hidden">
+                        </fieldset>
+                </form>
+                <div class="core-tabs" style="border: 0pt none ; position: static; display: block; float: none; font-family: Verdana,Arial,Helvetica,sans-serif; line-height: normal; clear: right;"><div class="core-tabs-inner" style="position: static; display: block; float: right; width: 520px;">
+                        <ul style="margin: 0px 5px 0pt 4px; padding: 0pt; position: static; display: block; float: right; list-style-type: none; line-height: normal; width: auto; height: auto;">
+                        	<li style="margin: 0pt; padding: 0pt; position: static; display: inline; height: auto; width: auto;"><a style="margin: 0pt 0px 0pt 0pt; padding: 0pt 0pt 0pt 9px; background: transparent url(http://www.tcd.ie/img/tab_l_sans.gif) no-repeat scroll left top; position: static; display: inline; font-family: Verdana,Arial,Helvetica,sans-serif; float: left; height: auto; width: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;" href="http://www.tcd.ie/" title="TCD Home"><span style="padding: 8px 8px 6px 0px; background: transparent url(http://www.tcd.ie/img/tab_r.gif) no-repeat scroll right top; position: static; display: block; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; cursor: pointer; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; line-height: normal; color: rgb(10, 78, 131);">TCD Home</span></a></li>
+                                <li style="margin: 0pt; padding: 0pt; position: static; display: inline; height: auto; width: auto;"><a style="margin: 0pt 0px 0pt 0pt; padding: 0pt 0pt 0pt 9px; background: transparent url(http://www.tcd.ie/img/tab_l.gif) no-repeat scroll left top; position: static; display: inline; font-family: Verdana,Arial,Helvetica,sans-serif; float: left; height: auto; width: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;" href="http://www.tcd.ie/structure/" title="Visit Faculties &amp; Schools"><span style="padding: 8px 8px 6px 0px; background: transparent url(http://www.tcd.ie/img/tab_r.gif) no-repeat scroll right top; position: static; display: block; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; cursor: pointer; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; line-height: normal; color: rgb(10, 78, 131);">Faculties &amp; Schools</span></a></li>
+                                <li style="margin: 0pt; padding: 0pt; position: static; display: inline; height: auto; width: auto;"><a style="margin: 0pt 0px 0pt 0pt; padding: 0pt 0pt 0pt 9px; background: transparent url(http://www.tcd.ie/img/tab_l.gif) no-repeat scroll left top; position: static; display: inline; font-family: Verdana,Arial,Helvetica,sans-serif; float: left; height: auto; width: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;" href="http://www.tcd.ie/courses/" title="Browse TCD Courses"><span style="padding: 8px 8px 6px 0px; background: transparent url(http://www.tcd.ie/img/tab_r.gif) no-repeat scroll right top; position: static; display: block; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; cursor: pointer; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; line-height: normal; color: rgb(10, 78, 131);">Courses</span></a></li>
+                                <li style="margin: 0pt; padding: 0pt; position: static; display: inline; height: auto; width: auto;"><a style="margin: 0pt 0px 0pt 0pt; padding: 0pt 0pt 0pt 9px; background: transparent url(http://www.tcd.ie/img/tab_l.gif) no-repeat scroll left top; position: static; display: inline; font-family: Verdana,Arial,Helvetica,sans-serif; float: left; height: auto; width: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;" href="http://www.tcd.ie/research/" title="Find out more about our Research"><span style="padding: 8px 8px 6px 0px; background: transparent url(http://www.tcd.ie/img/tab_r.gif) no-repeat scroll right top; position: static; display: block; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; cursor: pointer; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; line-height: normal; color: rgb(10, 78, 131);">Research</span></a></li>
+                                <li style="margin: 0pt; padding: 0pt; position: static; display: inline; height: auto; width: auto;"><a style="margin: 0pt 0px 0pt 0pt; padding: 0pt 0pt 0pt 9px; background: transparent url(http://www.tcd.ie/img/tab_l.gif) no-repeat scroll left top; position: static; display: inline; font-family: Verdana,Arial,Helvetica,sans-serif; float: left; height: auto; width: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;" href="http://www.tcd.ie/services/" title="TCD Services"><span style="padding: 8px 8px 6px 0px; background: transparent url(http://www.tcd.ie/img/tab_r.gif) no-repeat scroll right top; position: static; display: block; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; cursor: pointer; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; line-height: normal; color: rgb(10, 78, 131);">Services</span></a></li>
+                                <li style="margin: 0pt; padding: 0pt; position: static; display: inline; height: auto; width: auto;"><a style="margin: 0pt 0px 0pt 0pt; padding: 0pt 0pt 0pt 9px; background: transparent url(http://www.tcd.ie/img/tab_l.gif) no-repeat scroll left top; position: static; display: inline; font-family: Verdana,Arial,Helvetica,sans-serif; float: left; height: auto; width: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;" href="http://www.tcd.ie/contact/" title="Contact Details"><span style="padding: 8px 8px 6px 0px; background: transparent url(http://www.tcd.ie/img/tab_r.gif) no-repeat scroll right top; position: static; display: block; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; cursor: pointer; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; line-height: normal; color: rgb(10, 78, 131);">Contact</span></a></li>
+                                <li style="margin: 0pt; padding: 0pt; position: static; display: inline; height: auto; width: auto;"><a style="margin: 0pt 0px 0pt 0pt; padding: 0pt 0pt 0pt 9px; background: transparent url(http://www.tcd.ie/img/tab_l.gif) no-repeat scroll left top; position: static; display: inline; font-family: Verdana,Arial,Helvetica,sans-serif; float: left; height: auto; width: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-decoration: none;" href="http://www.tcd.ie/az/" title="TCD A-Z Listings"><span style="padding: 8px 8px 6px 0px; background: transparent url(http://www.tcd.ie/img/tab_r.gif) no-repeat scroll right top; position: static; display: block; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; cursor: pointer; float: left; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; line-height: normal; color: rgb(10, 78, 131);">A - Z</span></a></li>
+                        </ul>
+                </div></div>
+</div>
+<div style="clear: both; width: auto; position: static; height: auto; float: none;"></div>
+</div>
+	</div>
+	<!-- tcd top banner out -->
+
+	<div class="hide">| <a href="#navskip" id="breadcrumbskip">Skip Breadcrumbs</a> |</div>
+	<!-- breadcrumbs in -->
+	<div id="breadcrumbs"><p><a href="http://www.healthsciences.tcd.ie/">Faculty of Health Sciences</a> » <a href="http://www.medicine.tcd.ie/">School of Medicine</a> » <a href="http://www.medicine.tcd.ie/clinical_medicine/">Clinical Medicine</a> » <a href="http://www.medicine.tcd.ie/clinical_medicine/courses/">Courses</a> » <a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/">Msc molecular medicine</a></p><span class="hide">|</span></div>
+	<!-- breadcrumbs out -->
+			<!-- logobanner in -->
+	<div id="logobanner"><a href="http://www.medicine.tcd.ie/clinical_medicine/"><img src="estudoDeCaso_arquivos/logo.jpg" title="go to Department of Clinical Medicine homepage" alt="Department of Clinical Medicine logo" height="23" width="317"></a></div>
+<!-- logobanner out -->
+
+<!-- primarynav in -->
+<div class="hide">| <a href="#content" id="navskip">Skip Navigation</a> |</div>
+<div id="primarynav">
+		<ul><li><a href="http://www.medicine.tcd.ie/clinical_medicine/index.php" id="home">Home</a> |</li>
+<li><a href="http://www.medicine.tcd.ie/clinical_medicine/overview/" id="overview">Overview</a> |</li>
+<li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/" id="courses">Courses</a> |</li>
+<li><a href="http://www.medicine.tcd.ie/clinical_medicine/research/" id="research">Research</a> |</li>
+<li><a href="http://www.medicine.tcd.ie/clinical_medicine/electives/" id="electives">Electives</a> |</li>
+<li><a href="http://www.medicine.tcd.ie/clinical_medicine/staff/" id="staff">Staff</a> |</li>
+
+
+
+
+
+</ul>
+</div>
+<!-- primarynav out -->
+
+<!-- middle section in -->
+<div id="wrap">
+ <div id="subnav">
+<div class="hide">|<a href="#content">Skip Sub Navigation</a>|</div>
+    <ul><table border="0" cellpadding="0" width="10%">
+  <tbody><tr>
+    <td colspan="2"><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/index.php">Courses Home</a></li></td>
+    <td width="72%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/">Introduction - MSc Programme</a></li></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2"><table border="0" cellpadding="0" width="100%">
+      <tbody><tr>
+
+      </tr>
+      <tr>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/aims.php">Programme Aims</a></li></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/course_content.php">Course Content </a></li></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/nanoscience.php">Nanoscience</a></li></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/hcs.php">High Content Screening &amp; Analysis </a></li></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/course_outline.php">Course Outline </a></li></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/admissions.php">Admission</a></li></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/fees.php">Fees</a></li></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/alumni.php">Alumni</a></li></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/msc_molecular_medicine/contact.php">Contact form </a></li></td>
+      </tr>
+    </tbody></table></td>
+    <td>&nbsp;</td>
+  </tr>
+
+  
+  <tr>
+    <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/phd_molecular_medicine/">Ph.D. Programme </a></li></td><td></td>
+    
+    <td width="3%">&nbsp;</td>
+  </tr>
+  <tr>
+    <td><li><a href="http://www.medicine.tcd.ie/clinical_medicine/courses/dip_molecular_medicine/">Postgraduate Diploma </a></li>  
+    </td><td>&nbsp;</td>
+    <td>  
+    </td><td>&nbsp;</td>
+  </tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </ul>
+  </div> 
+  <div id="content">
+    <table border="0" cellpadding="0" width="90%">
+      <tbody><tr>
+        <td align="left" background="estudoDeCaso_arquivos/molecularbackground.jpg"><h1>Molecular Medicine - Contact Form </h1>
+          Institute of Molecular Medicine, Trinity College Dublin, Ireland
+          <p align="justify">
+If you are interested in knowing more about this programme please fill
+in the contact form below and we will respond to you as soon as possible<br>
+              <br>
+          </p></td>
+        <!--
+                                <td colspan="2"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><i>Please note that there were some technical difficulties with contact requests in late 2003.<br>If you failed to receive a reply to an earler request, please contact us again now.<br>Thank you and our apologies for any inconvenience.<br><br></i></font></td>
+-->
+      </tr>
+      <tr>
+        <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Name:</font></td>
+        <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <input id="nome" class="box" name="Name" style="" size="30" value="" type="text"
+		  onkeydown="this.style.backgroundColor='white';" onblur="formatarNome(this);">
+        </font></td>
+      </tr>
+      <tr>
+        <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Sex:</font> </td>
+        <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <select class="box" name="Sex" id="sexo" onchange="this.style.backgroundColor='#FFFFFF'">
+            <option value="" selected="selected">Select...</option>
+            <option value="Male">Male</option>
+            <option value="Fale">Fale</option>
+          </select>
+        </font></td>
+      </tr>
+      <tr>
+        <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Address:</font></td>
+        <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <textarea id="endereco" class="box" style="" name="Address" rows="5" cols="25" wrap="VIRTUAL" align="top"
+		  onkeydown="this.style.backgroundColor='white';" ></textarea>
+        </font></td>
+      </tr>
+      <tr>
+        <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Phone:</font></td>
+        <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <input id="telefone" class="box" style="" name="Phone" size="30" value="" type="text"
+		  onkeypress="return verificarNumero(event);" onkeydown="this.style.backgroundColor='white';" >
+        </font></td>
+      </tr>
+      <tr>
+        <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Fax:</font></td>
+        <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <input class="box" style="" name="Fax" size="30" value="" type="text">
+        </font></td>
+      </tr>
+      <tr>
+        <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Email:</font></td>
+        <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <input id="email" class="box" style="" name="email" size="30" value="" type="text"
+		  onkeyup="this.style.backgroundColor='white'">
+        </font></td>
+      </tr>
+      <tr>
+        <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Date&nbsp;of&nbsp;Birth:</font></td>
+        <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <input id="data" class="box" style="" name="Date of Birth" size="30" value="" type="text"
+		  onkeypress="formatarData(this); return verificarNumero(event);" onkeyup="this.style.backgroundColor='white'">
+        </font></td>
+      </tr>
+      <tr>
+        <td><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Nationality:</font></td>
+        <td align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <input class="box" style="" name="Nationality" size="30" value="" type="text">
+        </font></td>
+      </tr>
+      <tr>
+        <td colspan="2"><p align="justify"><font face="Verdana, Arial, Helvetica, sans-serif" size="1"><br>
+          Brief statent of research interest(s), including 
+          your reasons for wishing to take this course: </font></p></td>
+      </tr>
+      <tr>
+        <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <textarea class="box" style="width: 100%;" name="Research Interests" rows="5" cols="50" wrap="VIRTUAL"></textarea>
+        </font></td>
+      </tr>
+      <tr>
+        <td colspan="2"><p align="justify"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">3rd 
+          level education with details of qualifications, 
+          including class of degree(s), date(s), and 
+          name of institution(s) where the qualification(s) 
+          were obtained: </font></p></td>
+      </tr>
+      <tr>
+        <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <textarea class="box" style="width: 100%;" name="Qualifications" rows="5" cols="50" wrap="VIRTUAL"></textarea>
+        </font></td>
+      </tr>
+      <tr>
+        <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Additional 
+          Information: </font></td>
+      </tr>
+      <tr>
+        <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <textarea class="box" style="width: 100%;" name="Additional Information" rows="5" cols="50" wrap="VIRTUAL"></textarea>
+        </font></td>
+      </tr>
+      <tr>
+        <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="1">Where did you hear about the course:</font></td>
+      </tr>
+      <tr>
+        <td colspan="2"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+          <textarea class="box" style="width: 100%;" name="Where heard of course" rows="1" cols="50" wrap="VIRTUAL"></textarea>
+        </font></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right"><p align="right"><font face="Verdana, Arial, Helvetica, sans-serif" size="3">
+            <input class="box" name="Submit" value="Send" onclick="return validarDados();" type="submit">
+            <input class="box" name="Reset" value="Clear" type="reset">
+        </font></p></td>
+      </tr>
+    </tbody></table>
+  </div>
+                        
+
+</div>
+		 		   
+		  <!-- Contact In -->    
+  <div id="contact">Contact: <a href="mailto:oneillm1@tcd.ie">Web Administrator</a>
+
+|  <a href="http://www.medicine.tcd.ie/clinical_medicine/sitap.php">Sitap</a> | Last updated: Jul 16 2007 |  <a href="#topskip">Back to top </a>
+  </div>
+    <!-- Contact Out --> 
+
+	  	   <!-- Middle Section Out --> 
+  
+<!-- bottom address bar in -->
+<div id="bottom">Faculty of Health Sciences, Chistry Building, Trinity College Dublin, Dublin 2  | Tel:+353-1-896-1476
+</div>
+<!-- bottom address bar out -->
+
+  <!-- tcd bottom banner in -->
+<div id="bottombanner">
+<div class="tcd-footer-slim" style="border: 0pt none ; margin: 0pt; padding: 10px 0pt 60px; background: rgb(255, 255, 255) url(http://www.tcd.ie/img/tcd-footer-slim-shadow.gif) repeat-x scroll 0pt; clear: both; position: relative; display: block; float: left; width: 100%; font-size: 90%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+	<address style="border: 0pt none ; margin: 0pt; padding: 0pt 0pt 0pt 6px; background: transparent none repeat scroll 0%; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; line-height: normal; font-weight: normal; font-style: normal; display: block; position: static; float: left; width: auto; height: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: rgb(26, 55, 93);">Trinity College Dublin, College Green, Dublin 2</address>
+        <ul style="border: 0pt none ; margin: 0pt; padding: 0pt 6px 0pt 0pt; background: transparent none repeat scroll 0%; display: block; position: static; float: right; width: auto; height: auto; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; color: inherit; list-style-type: none; list-style-image: none; list-style-position: outside; text-align: right; line-height: normal;">
+                <li style="border: 0pt none ; margin: 0pt 0pt 0pt 0.75; padding: 0pt; background: transparent none repeat scroll 0%; display: inline; position: static; float: none; width: auto; height: auto; color: rgb(26, 55, 93); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: right; line-height: normal;"><a style="border: 0pt none ; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0%; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; line-height: normal; display: inline; position: static; float: none; width: auto; height: auto; color: rgb(26, 55, 93); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" href="http://www.tcd.ie/accessibility/">Accessibility</a></li>
+                <li style="border: 0pt none ; margin: 0pt 0pt 0pt 0.75; padding: 0pt; background: transparent none repeat scroll 0%; display: inline; position: static; float: none; width: auto; height: auto; color: rgb(26, 55, 93); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: right; line-height: normal;"><a style="border: 0pt none ; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0%; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; line-height: normal; display: inline; position: static; float: none; width: auto; height: auto; color: rgb(26, 55, 93); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" href="http://www.tcd.ie/privacy/">Privacy</a></li>
+                <li style="border: 0pt none ; margin: 0pt 0pt 0pt 0.75; padding: 0pt; background: transparent none repeat scroll 0%; display: inline; position: static; float: none; width: auto; height: auto; color: rgb(26, 55, 93); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: right; line-height: normal;"><a style="border: 0pt none ; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0%; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; line-height: normal; display: inline; position: static; float: none; width: auto; height: auto; color: rgb(26, 55, 93); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" href="http://www.tcd.ie/disclaim/">Disclaimer</a></li>
+                <li style="border: 0pt none ; margin: 0pt 0pt 0pt 0.75; padding: 0pt; background: transparent none repeat scroll 0%; display: inline; position: static; float: none; width: auto; height: auto; color: rgb(26, 55, 93); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial; text-align: right; line-height: normal;"><a style="border: 0pt none ; margin: 0pt; padding: 0pt; background: transparent none repeat scroll 0%; font-family: Verdana,Arial,Helvetica,sans-serif; font-size: x-small; font-weight: normal; font-style: normal; line-height: normal; display: inline; position: static; float: none; width: auto; height: auto; color: rgb(26, 55, 93); -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" href="http://www.tcd.ie/contacts/">Contact</a></li>
+        </ul>
+</div>
+<div style="clear: both;"></div>
+</div>
+<!-- tcd bottom banner out -->
+  
+</body></html>

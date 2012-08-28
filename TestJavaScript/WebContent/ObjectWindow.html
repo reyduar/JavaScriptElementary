@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Objeto Window</title>
+
+<script type="text/javascript">
+	
+	/**
+	 *Funcion que permite abrir un poput 
+	 */
+	 var ventanaPoput
+	 var intervalo
+	function abrirPoput() {
+		ventanaPoput=open("Poput.html", "Poput", "width=420, height=370");
+		intervalo = setInterval("moverVentana()", 500);//para que ejecute cuando se abre el poput
+		setTimeout("cerrarPoput();", 10000)
+		
+		//window.open("Poput.html", "Poput","menubar=yes, location=yes, scrollbars=yes, resizable=yes, fullscreen=yes","width=420, height=370");
+	}
+	
+	/**
+	 *Funcion que permite abrir un poput 
+	 */
+	function moverVentana() {
+		ventanaPoput.moveBy(2, 0);
+	}
+	
+	/**
+	 *Funcion que permite cerrar poput 
+	 */
+	function cerrarPoput() {
+		ventanaPoput.close();
+	}
+	/**
+	 *Funcion que permite mover el poput a un preterminado 
+	 */
+	function movePoput()
+	{
+		ventanaPoput.moveTo(420,100);
+		ventanaPoput.focus();
+	}
+	
+</script>
+</head>
+<body>
+	<input type=button value="Abrir Poput" onclick="abrirPoput()">
+	<input type=button value="Cerrar Poput" onclick="cerrarPoput()">
+	<input type=button value="Mueve Poput" onclick="movePoput()">
+
+	<div id="divPrincipal"></div>
+	<input id="textid" type=text >
+</body>
+</html>

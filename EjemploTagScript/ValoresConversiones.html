@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Ejemplo de Valores y Conversiones en Javacript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*Ejemplo #1*/
+		var numero;
+		document.write("<h6>" + typeof (numero) + "</h6>");
+		numero = 2.3;
+		document.write("<h6>" + typeof (numero) + "</h6>");
+		numero = "Texto";
+		document.write("<h6>" + typeof (numero) + "</h6>");
+		numero = true;
+		document.write("<h6>" + typeof (numero) + "</h6>");
+		
+		/*Ejemplo #2*/
+		var numero2 = "58";
+		document.write("<h4>" + numero2 + 1 + "</h4>");
+
+		/*Ejemplo #3*/
+		var numero3 = "58";
+		document.write("<h4>" +(3 + numero3 - 1)+ "</h4>");
+		
+		/*Ejemplo #4*/
+		var numero4 = "58";
+		document.write("<h4>"+(typeof(Number(numero4)))+"</h4>");
+		
+		/*Ejemplo #5*/
+		var numero5 = "58tttttttt";
+		document.write("<h4>"+(parseInt(numero5))+"</h4>");
+		
+		/*Ejemplo #6*/
+		var numero6 = "58.5rrttt";
+		document.write("<h4>"+(parseFloat(numero6))+"</h4>");
+	</script>
+</body>
+</html>
