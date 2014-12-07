@@ -1,0 +1,77 @@
+<html>
+<head>
+
+<script language=javascript>
+var timeDiff;
+var selectedCity;
+var daylightSavingAdjust = 0;
+function updateTimeZone()
+{
+   var lstCity = document.form1.lstCity;
+   timeDiff = lstCity.options[lstCity.selectedIndex].value;
+   selectedCity = lstCity.options[lstCity.selectedIndex].text;
+   updateTime();
+}
+function getTimeString(dateObject)
+{
+   var timeString;
+   var hours = dateObject.getHours();
+   if (hours < 10)
+      hours = "0" + hours;
+   var minutes = dateObject.getMinutes();
+   if (minutes < 10)
+      minutes = "0" + minutes;
+   var seconds = dateObject.getSeconds()
+   if (seconds < 10)
+      seconds = "0" + seconds;
+   timeString = hours + ":" + minutes + ":" + seconds;
+   return timeString;
+}
+function updateTime()
+{
+   var nowTime = new Date();
+   var resultsFrame = window.top.resultsFrame.document;
+   resultsFrame.open()
+   resultsFrame.write("La hora local es " + getTimeString(nowTime) + "<br>");
+
+   nowTime.setMinutes(nowTime.getMinutes() + nowTime.getTimezoneOffset() +
+      parseInt(timeDiff) + daylightSavingAdjust);
+   resultsFrame.write("La Hora de "+ selectedCity + " es " + getTimeString(nowTime));
+   resultsFrame.close();
+}
+function chkDaylightSaving_onclick()
+{
+   if (document.form1.chkDaylightSaving.checked)
+   {
+      daylightSavingAdjust = 60;
+   }
+   else
+   {
+      daylightSavingAdjust = 0;
+   }
+   updateTime();
+}
+</script>
+</head>
+<body onLoad="updateTimeZone()">
+<form name=form1>
+<select size=5 name=lstCity language=JavaScript onChange="updateTimeZone();">
+<option value=60 selected>Berlin
+<option value=330>Bombay
+<option value=0>Londres
+<option value=180>Moscú
+<option value=-300>Nueva York (EST)
+<option value=60>París
+<option value=-480>San Francisco (PST)
+<option value=600>Sydney
+</select>
+<p>
+Si en la ciudad seleccionada es verano
+y su país ajusta el horario de verano.
+<input type="checkbox" name=chkDaylightSaving language=JavaScript
+   onclick="return chkDaylightSaving_onclick()">
+</p>
+</form>
+</body>
+</html>
+

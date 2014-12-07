@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Ejemplo de Funcion</title>
+
+<script type="text/javascript">
+//Declaramo una funcion basica con paso de parametro
+function Saludo(quien) {
+	alert("Buenos dias "+quien);
+}
+
+//Declaramos una funcion que devuelve un valor
+function Promedio(a,b,c,d) {
+	resultado = (a+b+c+d)/4;
+	return resultado;
+}
+</script>
+</head>
+<body>
+<input type="button" value="Saludar" onclick='Saludo("Ariel")' >Saludar a Ariel</a>
+
+<p>Resultado de la llamada a la funcion promedio</p>
+<script type="text/javascript">
+	puntos = Promedio(4,5,7,3);
+	document.write("El resultado es: "+puntos);
+</script>
+						
+</body>
+</html>

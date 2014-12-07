@@ -1,0 +1,65 @@
+<html>
+<head> 
+<style type="text/css">
+body {
+	background-color: #003366;
+}
+
+body {
+	color: #DEDECA;
+	font-family:"Trebuchet MS";
+	font-weight:bolder;
+	font-size:20px;
+	
+}
+
+td, th {
+	color: #99CCCC;
+}
+
+h1 {
+	color: #FFFF33;
+}
+
+h2 {
+	color: #FFFF66;
+}
+
+h3, h4 {
+	color: #FFFFCC;
+}
+
+h5, h6 {
+	color: #6699CC;
+}
+
+a {
+	color: #9999cc;
+}
+
+</style>
+</head>
+<body>    
+<h1 align="center">Mostrar Fecha Actual con el uso de &quot;Date&quot; </h1>
+<p>&nbsp;</p>
+<p>
+  <script language="JavaScript" type="text/javascript">
+    
+var meses = new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio",
+
+                       "Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+var dateNow = new Date();
+var yearNow = dateNow.getFullYear();
+var monthNow = meses[dateNow.getMonth()];
+var dayNow = dateNow.getDate();
+
+    
+document.write("Hoy es el día " + dayNow);
+document.write(" del mes de " + monthNow);
+document.write(" del año " + yearNow);
+    
+</script>
+</p>
+</body>
+</html>
+

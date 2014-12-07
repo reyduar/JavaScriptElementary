@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type="text/css">
+body {
+	background-color: #003366;
+}
+
+body {
+	color: #DEDECA;
+	font-family:"Trebuchet MS";
+	font-weight:bolder;
+	font-size:20px;
+	
+}
+
+td, th {
+	color: #99CCCC;
+}
+
+h1 {
+	color: #FFFF33;
+}
+
+h2 {
+	color: #FFFF66;
+}
+
+h3, h4 {
+	color: #FFFFCC;
+}
+
+h5, h6 {
+	color: #6699CC;
+}
+
+a {
+	color: #9999cc;
+}
+
+</style>
+<title>Ejemplos usos de Date</title>
+<script language="JavaScript" type="text/javascript">
+   var localTime = new Date();
+</script>
+</head>
+<body>
+<h4>
+   El tiempo UTC es
+   <script language="JavaScript" type="text/javascript">
+    
+      document.write(localTime.toUTCString());
+   </script>
+</h4>
+<h4>
+   El tiempo local es
+   <script language="JavaScript" type="text/javascript">
+      document.write(localTime.toLocaleString());
+   </script>
+</h4>
+<h4>
+   Time Zone Offset es
+   <script language="JavaScript" type="text/javascript">
+      document.write(localTime.getTimezoneOffset());
+</script>
+</h4>
+    
+<h4>
+Usando toLocalTimeString() da:
+<script language="JavaScript" type="text/javascript">
+if (localTime.toLocaleTimeString)
+{
+  document.write(localTime.toLocaleTimeString())
+}
+</script>
+</h4>
+    
+    
+<h4>
+Usando toTimeString() da:
+<script language="JavaScript" type="text/javascript">
+if (localTime.toTimeString)
+{
+  document.write(localTime.toTimeString() )
+}
+</script>
+</h4>
+    
+    
+<h4>
+Usando toLocaleDateString() da:
+<script language="JavaScript" type="text/javascript">
+if (localTime.toLocaleDateString)
+{
+  document.write(localTime.toLocaleDateString())
+}
+</script>
+</h4>
+    
+<h4>
+Usando toDateString() da:
+<script language="JavaScript" type="text/javascript">
+if (localTime.toDateString)
+{
+  document.write(localTime.toDateString())
+}
+</script>
+</h4>
+    
+    
+</body>
+</html>
+

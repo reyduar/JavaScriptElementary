@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Mostrar Fecha y Hora</title>
+
+<!-- Autor : Ariel Duarte -->
+<!-- Fecha : 31/08/2012 -->
+
+
+<script language="javascript" type="text/javascript">
+ahora = new Date();
+
+horaLocal = ahora.toString(); //Hora del sistema
+horaUtc = ahora.toGMTString();//Horario universal
+
+horas = ahora.getHours();
+minutos = ahora.getMinutes();
+segundos = ahora.getSeconds();
+
+document.write("<b>Hora local: </b>" + horaLocal + "<br>");
+document.write("<b>Hora UTC: </b>" + horaUtc + "<br>");
+document.write("<font size = '5'>");
+document.write(horas+":"+minutos+":"+segundos);
+document.write("</font>");
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Primer ejemplo JavaScript</title>
+<script language="Javascript">
+	function SymError() {
+		return true;
+	}
+
+	window.onerror = SymError;
+
+	var SymRealWinOpen = window.open;
+
+	function SymWinOpen(url, name, attributes) {
+		return (new Object());
+	}
+
+	window.open = SymWinOpen;
+</script>
+
+</head>
+<body bgcolor="yellow" text="blue">
+	<script language="Javascript" type="text/javascript">
+		document.writeln("<h2>Bienvenido al primer ejemplo con JavaScript</h1>")
+	</script>
+	<font size="+2">Esto es codigo de ejemplo de texto en codigo HTML simple.</font>
+</body>
+</html>

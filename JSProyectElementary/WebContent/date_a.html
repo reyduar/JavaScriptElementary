@@ -1,0 +1,41 @@
+<html>
+<body>
+<script language="JavaScript" type="text/javascript">
+    
+var saludo;
+var fechaActual = new Date();
+var horaActual = fechaActual.getHours();
+var minutoActual = fechaActual.getMinutes();
+var segundoActual = fechaActual.getSeconds();
+    
+if (minutoActual < 10)
+{
+   minutoActual = "0" + minutoActual;
+}
+    
+if (segundoActual < 10)
+{
+   segundoActual = "0" + segundoActual;
+}
+    
+if (horaActual < 12)
+{
+   saludo = "Buenos Días";
+}
+else if (horaActual < 19)
+{
+   saludo = "Buenas Tardes";
+}
+else
+{
+   saludo = "Buenas Noches";
+}
+    
+document.write("<h4>" + saludo + " y bienvenido a mi Página Web</h4>");
+document.write("La hora que marca tu reloj es ");
+    
+document.write(horaActual + ":" + minutoActual + ":" + segundoActual);
+    
+</script>
+</body>
+</html>

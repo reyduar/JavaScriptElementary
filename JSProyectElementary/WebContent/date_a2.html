@@ -1,0 +1,87 @@
+<html>
+<head> 
+<style type="text/css">
+body {
+	background-color: #003366;
+}
+
+body {
+	color: #DEDECA;
+	font-family:"Trebuchet MS";
+	font-weight:bolder;
+	font-size:20px;
+	
+}
+
+td, th {
+	color: #99CCCC;
+}
+
+h1 {
+	color: #FFFF33;
+}
+
+h2 {
+	color: #FFFF66;
+}
+
+h3, h4 {
+	color: #FFFFCC;
+}
+
+h5, h6 {
+	color: #6699CC;
+}
+
+a {
+	color: #9999cc;
+}
+
+</style>
+</head>
+<body>    
+<h1 align="center">Mostrar Hora Actual con el uso de &quot;Date&quot; </h1>
+<p>&nbsp;</p>
+<p>
+ <script language="JavaScript" type="text/javascript">
+    
+var saludo;
+    
+var nowDate = new Date();
+var nowHour = nowDate.getHours();
+var nowMinute = nowDate.getMinutes();
+var nowSecond = nowDate.getSeconds();
+    
+if (nowMinute < 10)
+{
+   nowMinute = "0" + nowMinute;
+}
+    
+if (nowSecond < 10)
+{
+   nowSecond = "0" + nowSecond;
+}
+    
+if (nowHour < 12)
+{
+   saludo = "Buenos Días";
+}
+else if (nowHour < 17)
+{
+   saludo = "Buenas Tardes";
+}
+else
+{
+   saludo = "Buenas Noches";
+}
+    
+document.write("<h4>" + saludo + " y bienvenido a mi Página Web</h4>")
+document.write("La hora que marca tu reloj es ");
+    
+document.write(nowHour + ":" + nowMinute + ":" + nowSecond);
+    
+</script>
+</p>
+</body>
+</html>
+
